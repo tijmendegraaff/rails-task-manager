@@ -1,6 +1,10 @@
+<div class="row">
 <% @tasks.each do |task| %>
-  <%= link_to task.title, task_path(task) %>
-  <p><%= task.details %></p>
-  <p><%= task.done %></p>
-<% end %>
-<%= link_to "Add new task", new_task_path(@task) %>
+  <div class="col-xs-12">
+    <%= link_to task.title, task_path(task) %>
+    <p><%= task.details %></p>
+    <p><%= task.done %></p>
+  </div>
+  <% end %>
+  <%= link_to "Add new", new_task_path(@task), :class => "btn btn-primary" %>
+</div>

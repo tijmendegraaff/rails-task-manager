@@ -1,9 +1,17 @@
+<div class="form-inline">
 <%= form_for(@task) do |f| %>
+  <div class="form-group">
   <%= f.label :title %>
   <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
   <%= f.label :details %>
   <%= f.text_field :details %>
+  </div>
+  <div class="form-group">
   <%= f.label :done %>
   <%= f.check_box :done %>
-  <%= f.submit %>
+  </div>
+  <%= f.submit :class => "btn btn-warning" %>
 <% end %>
+</div>
